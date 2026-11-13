@@ -16,6 +16,30 @@ Built as a B.Tech Computer Science demonstration and portfolio project, ShelfWis
 - Configure closed locations, blocked aisles, and crowd multipliers through a token-protected Administration screen.
 - Store the sample catalogue and saved constraints in a local SQLite database.
 
+## Current status
+
+ShelfWise is deployed as a free, single-library portfolio demonstration.
+
+- **Live website:** [Visit ShelfWise](https://shelfwise-web-abfx.onrender.com)
+- **Backend check:** [View the sample book catalogue](https://shelfwise-api-xooj.onrender.com/api/books)
+- **API documentation:** [Explore the API](https://shelfwise-api-xooj.onrender.com/docs)
+
+The website supports book search, interactive library maps, BFS, DFS, A*,
+algorithm comparison, and multi-book route planning.
+
+The backend check links to an existing API endpoint; it is not a dedicated
+health-check endpoint.
+
+**Free-hosting limitations:** The backend may take time to wake after
+inactivity. Saved SQLite changes, including library constraints, can be lost
+when the backend restarts or redeploys. The sample catalogue will be seeded
+again. The Administration page requires a token and is not currently enabled
+on the deployed backend.
+
+**Current scope:** ShelfWise uses a sample library. Multi-library accounts,
+editable catalogues and maps, and persistent hosted storage are planned
+future improvements.
+
 ## How it works
 
 ```text
