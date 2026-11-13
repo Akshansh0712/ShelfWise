@@ -40,6 +40,9 @@ on the deployed backend.
 editable catalogues and maps, and persistent hosted storage are planned
 future improvements.
 
+**Project status:** Completed single-library prototype. Multi-library support
+and persistent hosted storage are planned.
+
 ## How it works
 
 ```text
