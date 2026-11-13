@@ -4,6 +4,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI, HTTPException, Header
 from fastapi.middleware.cors import CORSMiddleware
 from . import database
+from .config import allowed_origins
 from .graph import make_graph
 from .optimizer import SEARCH, collect
 from .schemas import RouteRequest, CollectRequest, Constraints, RouteResponse
@@ -18,7 +19,7 @@ async def lifespan(app):
 app = FastAPI(title="ShelfWise API", lifespan=lifespan)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_origins=allowed_origins(),
     allow_methods=["*"],
     allow_headers=["*"],
 )
